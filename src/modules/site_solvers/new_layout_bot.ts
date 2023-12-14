@@ -68,7 +68,9 @@ export async function site_solver_new(page: any, analize_link: string) {
   const registration_password: any = await page.$('[id="registration_password"]');
 
   await registration_email.type(user.email, { delay: faker.number.int({ min: 12, max: 30 }) });
-  await registration_password.type(user.password, { delay: faker.number.int({ min: 12, max: 30 }) });
+  await registration_password.type(user.password, {
+    delay: faker.number.int({ min: 12, max: 30 }),
+  });
 
   const third_page_buttons = await page.$$('button');
 
@@ -87,11 +89,13 @@ export async function site_solver_new(page: any, analize_link: string) {
 
   await page.waitForSelector('[id="registration_username"]');
   const registration_username: any = await page.$('[id="registration_username"]');
-  await registration_username.type(user.nickname, { delay: faker.number.int({ min: 12, max: 30 }) });
+  await registration_username.type(user.nickname, {
+    delay: faker.number.int({ min: 12, max: 30 }),
+  });
 
-  await console.log('essa');
-
-  const [button] = await page.$x('/html/body/div[1]/div/div[3]/main/div/form/div[3]/div/div[2]/button'); //Unable to locate button so I used xpath
+  const [button] = await page.$x(
+    '/html/body/div[1]/div/div[3]/main/div/form/div[3]/div/div[2]/button'
+  ); //Unable to locate button so I used xpath
 
   await button.click();
 
@@ -157,10 +161,14 @@ export async function site_solver_new(page: any, analize_link: string) {
 
     await page.waitForSelector('[name="registration[username]"]');
     const second_username_input = await page.$('[name="registration[username]"]');
-    await second_username_input.type(user.nickname, { delay: faker.number.int({ min: 12, max: 30 }) });
+    await second_username_input.type(user.nickname, {
+      delay: faker.number.int({ min: 12, max: 30 }),
+    });
 
     await page.waitForXPath('/html/body/div[1]/div/div[3]/main/div/form/div[3]/div/div[2]/button');
-    const [button3] = await page.$x('/html/body/div[1]/div/div[3]/main/div/form/div[3]/div/div[2]/button'); //Unable to locate button so I used xpath
+    const [button3] = await page.$x(
+      '/html/body/div[1]/div/div[3]/main/div/form/div[3]/div/div[2]/button'
+    ); //Unable to locate button so I used xpath
     await button3.click();
 
     await page.waitForTimeout(2000);
