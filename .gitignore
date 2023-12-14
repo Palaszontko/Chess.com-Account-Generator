@@ -1,0 +1,19 @@
+# Node.js
+node_modules/
+
+# TypeScript
+*.js
+*.map
+*.tsbuildinfo
+
+# Dependency directories
+dist/         
+
+# .vscode
+.vscode/
+
+# macOS
+.DS_Store
+
+# Environment 
+.env
