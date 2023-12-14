@@ -62,8 +62,7 @@ Before using the script, ensure you have the following prerequisites installed o
 - Scipt stores data of generated accounts in src/users_data.csv
 
 ## Disclaimer
-
-    This script is for educational purposes only. The use of automated tools to create accounts on websites may violate the terms of service of those websites. Use at your own risk.
+This script is for educational purposes only. The use of automated tools to create accounts on websites may violate the terms of service of those websites. Use at your own risk.
 
 ## License
 
